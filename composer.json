@@ -1,0 +1,17 @@
+{
+    "name": "magekeeper/simple_mvc",
+    "description": "Simple MVC Application Example",
+    "type": "project",
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Pavel Usachev",
+            "email": "webcodekeeper@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "": "src/" }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
