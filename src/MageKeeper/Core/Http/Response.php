@@ -26,7 +26,7 @@ class Response implements ResponseInterface
      */
     public function __construct($version = '1.0')
     {
-        $this->version = $version;
+        $this->version = (string) $version;
     }
 
     /**
@@ -75,7 +75,7 @@ class Response implements ResponseInterface
     public function send()
     {
         if (!headers_sent()) {
-            foreach($this->headers as $header) {
+            foreach ($this->headers as $header) {
                 header("$this->version $header", true);
             }
         }

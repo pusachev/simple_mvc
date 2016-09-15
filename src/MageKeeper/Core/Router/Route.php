@@ -45,6 +45,10 @@ class Route implements RouteInterface
      */
     public function createController()
     {
+        if (!class_exists($this->controllerClass)) {
+            throw new \LogicException("The class {$this->controllerClass} not found!");
+        }
+
         return new $this->controllerClass;
     }
 }
